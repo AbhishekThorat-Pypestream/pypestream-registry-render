@@ -1,0 +1,27 @@
+version: "3.1"
+
+services:
+  verdaccio:
+    image: verdaccio/verdaccio
+    container_name: "verdaccio"
+    networks:
+      - node-network
+    environment:
+      - VERDACCIO_PORT=4874
+      - NPM_TOKEN=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
+    ports:
+      - "4874:4874"
+    volumes:
+      - "./.verdaccio:/verdaccio/conf"
+  esm.sh:
+    image: ghcr.io/esm-dev/esm.sh
+    container_name: "esm.sh"
+    networks:
+      - node-network
+    environment:
+      - NPM_REGISTRY=http://verdaccio:4874/
+    ports:
+      - "8080:8080"
+networks:
+  node-network:
+    driver: bridge
