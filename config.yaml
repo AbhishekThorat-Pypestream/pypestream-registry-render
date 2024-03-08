@@ -2,6 +2,7 @@ storage: ./storage
 auth:
   htpasswd:
     file: ./htpasswd
+    algorithm: bcrypt
 uplinks:
   pypestream-npmjs:
     url: https://registry.npmjs.org/
