@@ -18,7 +18,7 @@ services:
     networks:
       - node-network
     environment:
-      - NPM_REGISTRY=http://verdaccio:4873/
+      - NPM_REGISTRY=http://verdaccio:4874/
     ports:
       - "8080:8080"
 networks:
