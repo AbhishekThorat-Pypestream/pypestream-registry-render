@@ -5,6 +5,9 @@ USER root
 ENV NODE_ENV=production
 
 COPY ./.verdaccio/config.yaml /verdaccio/conf
-COPY ./.verdaccio/htpasswd /verdaccio/conf/htpasswd
+
+# Need to remove this?
 RUN chmod -R 777 /verdaccio/conf/
 USER verdaccio
+
+#Need to add support for esm
