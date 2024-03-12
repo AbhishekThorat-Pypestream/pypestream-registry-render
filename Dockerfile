@@ -4,7 +4,7 @@ USER root
 
 ENV NODE_ENV=production
 
-COPY ./.verdaccio/config.yaml /verdaccio/conf
+COPY ./config.yaml /verdaccio/conf
 
 # Need to remove this?
 RUN chmod -R 777 /verdaccio/conf/

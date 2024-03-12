@@ -1,4 +1,4 @@
-storage: ./storage
+storage: /verdaccio/conf/storage
 auth:
   htpasswd:
     file: ./htpasswd
@@ -12,15 +12,15 @@ uplinks:
     url: https://registry.npmjs.org/
 
 packages:
-  '@pypestream/test-pkg':
+  "@pypestream/test-pkg":
     access: $all
     publish: $authenticated
     proxy: pypestream-npmjs
-  '@pypestream/email-templates':
+  "@pypestream/email-templates":
     access: $allg
     publish: $authenticated
     proxy: pypestream-npmjs
-  '**':
+  "**":
     proxy: npmjs
     access: $all
     publish: $all
