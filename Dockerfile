@@ -4,5 +4,5 @@ USER root
 
 ENV NODE_ENV=production
 
-COPY ./verdaccio/config.yaml /verdaccio/conf
+COPY ./.verdaccio/config.yaml /verdaccio/conf
 USER verdaccio
