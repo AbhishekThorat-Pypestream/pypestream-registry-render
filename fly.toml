@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for pype-verdaccio-frosty-water-2941-broken-dew-2625 on 2024-03-12T17:18:44+05:30
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'pype-verdaccio-frosty-water-2941-broken-dew-2625'
+primary_region = 'bos'
+
+[build]
+
+[http_service]
+  internal_port = 4873
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
