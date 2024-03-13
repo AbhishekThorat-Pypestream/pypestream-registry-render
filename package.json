@@ -4,7 +4,7 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "verdaccio:publish": "npm publish --registry https://pype-verdaccio.onrender.com/",
+    "verdaccio:publish": "npm publish --registry http://localhost:4873/",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
