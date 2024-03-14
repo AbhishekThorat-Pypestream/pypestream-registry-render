@@ -2,7 +2,7 @@ FROM verdaccio/verdaccio
 
 USER root
 
-ENV NODE_ENV=development
+ENV NODE_ENV=production
 
 # Need to remove this?
 RUN chmod -R 777 /verdaccio/conf/

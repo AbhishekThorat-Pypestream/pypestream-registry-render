@@ -1,4 +1,4 @@
-storage: /verdaccio/conf/storage
+storage: /verdaccio-data/
 auth:
   htpasswd:
     file: ./htpasswd
