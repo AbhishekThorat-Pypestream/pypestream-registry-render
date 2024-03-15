@@ -5,4 +5,4 @@ ADD ./config.json /etc/esmd/config.json
 ENV test=$NPM_REGISTRY 
 CMD echo “Printing the value of the test : $test 
 
-CMD ["NPM_REGISTRY=$test sh", "-c", "esmd --config /etc/esmd/config.json"]
+CMD ["sh", "-c", "esmd --config /etc/esmd/config.json"]
