@@ -12,6 +12,6 @@ services:
     envVars:
       - key: NPM_REGISTRY
         fromService:
-          name: verdaccio
+          name: pypestream-registry
           type: web
-          property: host
+          property: RENDER_EXTERNAL_HOSTNAME
