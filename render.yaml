@@ -2,7 +2,7 @@ previewsEnabled: true
 
 services:
   - type: web
-    name: verdaccio
+    name: pypestream-registry
     region: oregon # optional (defaults to oregon)
     plan: starter # optional (defaults to starter)
     env: docker
@@ -12,12 +12,12 @@ services:
       sizeGB: 1 # optional
 
   - type: web
-    name: esm
+    name: pypestream-registry-esm
     env: docker
     dockerfilePath: ./Dockerfile.esm
     envVars:
       - key: NPM_REGISTRY
         fromService:
-          name: verdaccio
+          name: pypestream-registry
           type: web
-          property: host
+          property: RENDER_EXTERNAL_HOSTNAME
