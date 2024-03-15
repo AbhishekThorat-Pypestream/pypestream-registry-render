@@ -22,6 +22,4 @@ services:
           type: web
           envVarKey: RENDER_EXTERNAL_URL
       - key: NEW_API
-        fromService:
-          name: pypestream-registry
-          type: web
+        value: test
