@@ -9,7 +9,7 @@ services:
     name: esm
     runtime: image
       image:
-        url: docker.io/my-name/my-image:latest
+        url: https://ghcr.io/esm-dev/esm.sh
           envVars:
             - key: NPM_REGISTRY
               fromService:
