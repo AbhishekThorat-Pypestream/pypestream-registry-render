@@ -17,7 +17,7 @@ services:
     dockerfilePath: ./Dockerfile.esm
     envVars:
       - key: NPM_REGISTRY
-        fromService:
-          name: pypestream-registry
-          type: web
-          property: RENDER_EXTERNAL_HOSTNAME
+          fromService:
+            type: web
+            name: pypestream-registry
+            envVarKey: RENDER_EXTERNAL_HOSTNAME
