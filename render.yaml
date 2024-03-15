@@ -20,4 +20,4 @@ services:
         fromService:
           name: pypestream-registry
           type: web
-          property: RENDER_EXTERNAL_HOSTNAME
+          property: hostport
