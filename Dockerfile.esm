@@ -1,6 +1,6 @@
 FROM ghcr.io/esm-dev/esm.sh
 ADD ./config.json /etc/esmd/config.json
 ENV NPM_REGISTRY=$VERDACCIO_HOST
-CMD ["esmd", "--config", "/etc/esmd/config.json", ""]
+# CMD ["esmd", "esmd --config", "/etc/esmd/config.json", ""]
 
-# CMD ["sh", "-c", "java -jar ${NPM_REGISTRY}.jar"]
+CMD ["sh", "-c", "esmd --config /etc/esmd/config.json --env ${NPM_REGISTRY}"]
