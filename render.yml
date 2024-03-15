@@ -1,6 +1,0 @@
-services:
-  - type: web
-    name: verdaccio
-    region: oregon # optional (defaults to oregon)
-    plan: starter # optional (defaults to starter)
-    env: docker

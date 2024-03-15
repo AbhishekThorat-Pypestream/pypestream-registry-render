@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: verdaccio
+    region: oregon # optional (defaults to oregon)
+    plan: starter # optional (defaults to starter)
+    env: docker
+
+  - type: web
+    name: esm
+    env: docker
+    dockerfilePath: ./Dockerfile.esm
+    envVars:
+      - key: NPM_REGISTRY
+        fromService:
+          name: verdaccio
+          type: web
+          property: host
