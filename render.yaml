@@ -20,4 +20,4 @@ services:
         fromService:
           name: pypestream-registry
           type: web
-          envVarKey: RENDER_EXTERNAL_HOSTNAME
+          envVarKey: RENDER_EXTERNAL_URL
