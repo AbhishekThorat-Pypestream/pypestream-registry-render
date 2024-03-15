@@ -4,6 +4,10 @@ services:
     region: oregon # optional (defaults to oregon)
     plan: starter # optional (defaults to starter)
     env: docker
+    disk:
+      name: verdaccio-data
+      mountPath: /verdaccio/storage
+      sizeGB: 1 # optional
 
   - type: web
     name: esm
