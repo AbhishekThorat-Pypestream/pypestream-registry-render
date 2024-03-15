@@ -1,12 +1,12 @@
 services:
   - type: web
-    name: verdaccio
+    name: pypestream-registry
     region: oregon # optional (defaults to oregon)
     plan: starter # optional (defaults to starter)
     env: docker
 
   - type: web
-    name: esm
+    name: pypestream-registry-esm
     env: docker
     dockerfilePath: ./Dockerfile.esm
     envVars:
