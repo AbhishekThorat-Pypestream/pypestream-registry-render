@@ -8,9 +8,9 @@ services:
   - type: web
     name: esm
     env: docker
-    dockerfilePath: ./Dockerfile.esm
+    dockerfilePath: ghcr.io/esm-dev/esm.sh
     envVars:
-      - key: VERDACCIO_HOST
+      - key: NPM_REGISTRY
         fromService:
           name: verdaccio
           type: web

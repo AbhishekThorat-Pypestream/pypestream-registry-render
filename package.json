@@ -1,10 +1,10 @@
 {
-  "name": "@pypestream/temp",
+  "name": "@pypestream/temp-abhi",
   "version": "0.0.2",
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "verdaccio:publish": "npm publish --registry https://pypestream-registry-render.onrender.com/",
+    "verdaccio:publish": "npm publish --registry https://verdaccio-gjdj.onrender.com/",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
