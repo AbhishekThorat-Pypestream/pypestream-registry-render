@@ -8,11 +8,11 @@ services:
   - type: web
     name: esm
     runtime: image
-      image:
-        url: https://ghcr.io/esm-dev/esm.sh
-          envVars:
-            - key: NPM_REGISTRY
-              fromService:
-                name: verdaccio
-                type: web
-                property: host
+    image:
+      url: ghcr.io/esm-dev/esm.sh:v135
+    envVars:
+      - key: NPM_REGISTRY
+        fromService:
+          name: verdaccio
+          type: web
+          property: host
