@@ -4,3 +4,14 @@ services:
     region: oregon # optional (defaults to oregon)
     plan: starter # optional (defaults to starter)
     env: docker
+
+  - type: web
+    name: esm
+    env: docker
+    dockerfilePath: ./Dockerfile.esm
+    envVars:
+      - key: VERDACCIO_HOST
+        fromService:
+          name: verdaccio
+          type: web
+          property: host

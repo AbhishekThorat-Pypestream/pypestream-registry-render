@@ -1,6 +1,3 @@
 {
-  "port": 8080,
-  "environment": {
-    "NPM_REGISTRY": "http://verdaccio:4873/"
-  }
+  "port": 8080
 }
