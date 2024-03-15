@@ -7,11 +7,12 @@ services:
 
   - type: web
     name: esm
-    env: docker
-    dockerfilePath: ghcr.io/esm-dev/esm.sh
-    envVars:
-      - key: NPM_REGISTRY
-        fromService:
-          name: verdaccio
-          type: web
-          property: host
+    runtime: image
+      image:
+        url: docker.io/my-name/my-image:latest
+          envVars:
+            - key: NPM_REGISTRY
+              fromService:
+                name: verdaccio
+                type: web
+                property: host
