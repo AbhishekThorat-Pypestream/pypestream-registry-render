@@ -13,7 +13,7 @@ uplinks:
 notify:
   method: POST
   headers: [{ 'Content-Type': 'application/json' }]
-  endpoint: https://deep-goat-49.deno.dev
+  endpoint: https://deno-as-webhook.onrender.com
   content: '{"color":"green","message":"New package published: * {{ name }}*","notify":true,"message_format":"text", "allSchema": [
     {{#each versions}}
       {{#each this.schemas}}
