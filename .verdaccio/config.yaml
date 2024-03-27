@@ -2,6 +2,14 @@ storage: /verdaccio/conf/storage
 auth:
   htpasswd:
     file: ./htpasswd
+uplinks:
+  pypestream-npmjs:
+    url: https://registry.npmjs.org/
+    auth:
+      type: bearer
+      token_env: true # by defaults points to the environment variable `NPM_TOKEN`
+  npmjs:
+    url: https://registry.npmjs.org/
 notify:
   method: POST
   headers: [{ 'Content-Type': 'application/json' }]
@@ -13,15 +21,6 @@ notify:
           {{#if @last}} {{else}},{{/if}}
       {{/each}}
   {{/each}}] }'
-uplinks:
-  pypestream-npmjs:
-    url: https://registry.npmjs.org/
-    auth:
-      type: bearer
-      token_env: true # by defaults points to the environment variable `NPM_TOKEN`
-  npmjs:
-    url: https://registry.npmjs.org/
-
 packages:
   "@pypestream/test-pkg":
     access: $all
