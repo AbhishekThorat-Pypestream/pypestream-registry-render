@@ -2,6 +2,17 @@ storage: /verdaccio/conf/storage
 auth:
   htpasswd:
     file: ./htpasswd
+notify:
+  method: POST
+  headers: [{ 'Content-Type': 'application/json' }]
+  endpoint: https://deep-goat-49.deno.dev
+  content: '{"color":"green","message":"New package published: * {{ name }}*","notify":true,"message_format":"text", "allSchema": [
+    {{#each versions}}
+      {{#each this.schemas}}
+          "{{this}}"
+          {{#if @last}} {{else}},{{/if}}
+      {{/each}}
+  {{/each}}] }'
 uplinks:
   pypestream-npmjs:
     url: https://registry.npmjs.org/
