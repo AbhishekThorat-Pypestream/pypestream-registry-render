@@ -8,7 +8,7 @@ services:
     env: docker
     disk:
       name: verdaccio-data
-      mountPath: /verdaccio/storage
+      mountPath: /verdaccio/conf/storage
       sizeGB: 1 # optional
 
   - type: web
