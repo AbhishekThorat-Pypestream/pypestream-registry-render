@@ -12,15 +12,16 @@ uplinks:
     url: https://registry.npmjs.org/
 notify:
   method: POST
-  headers: [{ 'Content-Type': 'application/json' }]
+  headers: [{ "Content-Type": "application/json" }]
   endpoint: https://deno-as-webhook.onrender.com
-  content: '{"message":"New package published: * {{ name }}*","notify":true,"message_format":"text", "version": "{{#each versions}} v{{version}}{{/each}}", "allSchema": [
+  content:
+    '{"message":"New package published: * {{ name }}*","notify":true,"message_format":"text", "version": "{{#each versions}} v{{version}}{{/each}}", "schema": {
     {{#each versions}}
-      {{#each this.schemas}}
-          "{{this}}"
-          {{#if @last}} {{else}},{{/if}}
-      {{/each}}
-  {{/each}}] }'
+    {{#each this.schema}}
+    "{{@key}}": "{{this}}"
+    {{/each}}
+    {{/each}}
+    }'
 packages:
   "@pypestream/test-pkg":
     access: $all
