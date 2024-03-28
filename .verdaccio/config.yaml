@@ -17,9 +17,7 @@ notify:
   content:
     '{"message":"New package published: * {{ name }}*","notify":true,"message_format":"text", "version": "{{#each versions}} v{{version}}{{/each}}", "schema": {
     {{#each versions}}
-    {{#each this.schema}}
-    "{{@key}}": "{{this}}"
-    {{/each}}
+    {{this.schema}}
     {{/each}}
     }'
 packages:
