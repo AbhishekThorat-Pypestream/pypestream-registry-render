@@ -15,9 +15,9 @@ notify:
   headers: [{ "Content-Type": "application/json" }]
   endpoint: https://deno-as-webhook.onrender.com
   content:
-    '{"message":"New package published: * {{ name }}*","notify":true,"message_format":"text", "version": "{{#each versions}} v{{version}}{{/each}}", "schema": {
+    '{"message":"New package published: * {{ name }}*","notify":true,"message_format":"text", "version": "{{#each versions}} v{{version}}{{/each}}", "schema":
     {{#each versions}}
-    {{this.schema}}
+    "{{this.schema}}"
     {{/each}}
     }'
 packages:
